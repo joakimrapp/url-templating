@@ -51,14 +51,14 @@ const create = {
 	parsed: ( { rawExpression, rawLiteral } ) => {
     if( is.defined( rawExpression ) ) {
       const [ operator, expressionParts ] = parse.operatorAndExpressionParts( rawExpression );
-      return expressionParts.map( ( [ name ] ) => ( { expression: true, name, query: is.keyOperator( operator ) } ) );
+      return expressionParts.map( ( [ key ] ) => ( { expression: true, key, query: is.keyOperator( operator ) } ) );
     }
 		else if( is.defined( rawLiteral ) ) {
 			return encode.reserved( rawLiteral ).split( '/' ).reduce( ( result, part, index ) => {
 				if( index > 0 )
-					result.push( { separator: true, type: '/' } );
+					result.push( { separator: true, value: '/' } );
 				if( part.length > 0 )
-					result.push( { literal: part } );
+					result.push( { literal: true, value: part } );
 				return result;
 			}, [] );
     }
