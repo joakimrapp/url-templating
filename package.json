@@ -1,6 +1,6 @@
 {
   "name": "@jrapp/url-templating",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Url templating, can partially expand urls",
   "main": "./src/index.js",
   "scripts": {
@@ -22,6 +22,5 @@
   "devDependencies": {
     "@jrapp/node-project-setup": "*"
   },
-  "dependencies": {
-  }
+  "dependencies": {}
 }
