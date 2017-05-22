@@ -1,6 +1,6 @@
 {
   "name": "@jrapp/url-templating",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Url templating, can partially expand urls",
   "main": "./src/index.js",
   "scripts": {
