@@ -51,7 +51,7 @@ const create = {
 	parsed: ( { rawExpression, rawLiteral } ) => {
     if( is.defined( rawExpression ) ) {
       const [ operator, expressionParts ] = parse.operatorAndExpressionParts( rawExpression );
-      return expressionParts.map( ( [ name ] ) => ( { expression: true, name, operator } ) );
+      return expressionParts.map( ( [ name ] ) => ( { expression: true, name, query: is.keyOperator( operator ) } ) );
     }
 		else if( is.defined( rawLiteral ) ) {
 			return encode.reserved( rawLiteral ).split( '/' ).reduce( ( result, part, index ) => {
